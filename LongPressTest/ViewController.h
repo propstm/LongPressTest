@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SWTableViewCell.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, SWTableViewCellDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableview;
+
 
 
 @end

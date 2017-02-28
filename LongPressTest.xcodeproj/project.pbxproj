@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331523D29125338EA1D44AE0 /* libPods-LongPressTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40559F5572F92FE2B7D49157 /* libPods-LongPressTest.a */; };
 		90992C721E646EFF00FDF977 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90992C711E646EFF00FDF977 /* main.m */; };
 		90992C751E646EFF00FDF977 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90992C741E646EFF00FDF977 /* AppDelegate.m */; };
 		90992C781E646EFF00FDF977 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90992C771E646EFF00FDF977 /* ViewController.m */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F5D3DAE2B9E71F4409B09A6 /* Pods-LongPressTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LongPressTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LongPressTest/Pods-LongPressTest.debug.xcconfig"; sourceTree = "<group>"; };
+		40559F5572F92FE2B7D49157 /* libPods-LongPressTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LongPressTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E840C411E1E4273BD6078B1 /* Pods-LongPressTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LongPressTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-LongPressTest/Pods-LongPressTest.release.xcconfig"; sourceTree = "<group>"; };
 		90992C6D1E646EFF00FDF977 /* LongPressTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LongPressTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90992C711E646EFF00FDF977 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90992C731E646EFF00FDF977 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331523D29125338EA1D44AE0 /* libPods-LongPressTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				90992C891E646F0000FDF977 /* LongPressTestTests */,
 				90992C941E646F0000FDF977 /* LongPressTestUITests */,
 				90992C6E1E646EFF00FDF977 /* Products */,
+				A0020F111498AB2FA5E8DBA1 /* Pods */,
+				C479EC9E29B61A19AE1A5829 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = LongPressTestUITests;
 			sourceTree = "<group>";
 		};
+		A0020F111498AB2FA5E8DBA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D3DAE2B9E71F4409B09A6 /* Pods-LongPressTest.debug.xcconfig */,
+				4E840C411E1E4273BD6078B1 /* Pods-LongPressTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C479EC9E29B61A19AE1A5829 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40559F5572F92FE2B7D49157 /* libPods-LongPressTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90992C9A1E646F0000FDF977 /* Build configuration list for PBXNativeTarget "LongPressTest" */;
 			buildPhases = (
+				AC43F5A59EF9B8470E6F4B0F /* [CP] Check Pods Manifest.lock */,
 				90992C691E646EFF00FDF977 /* Sources */,
 				90992C6A1E646EFF00FDF977 /* Frameworks */,
 				90992C6B1E646EFF00FDF977 /* Resources */,
+				B7487932559F219CB6AFF9EB /* [CP] Embed Pods Frameworks */,
+				E2952CF0C30B40D45733E2D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +297,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC43F5A59EF9B8470E6F4B0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7487932559F219CB6AFF9EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LongPressTest/Pods-LongPressTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2952CF0C30B40D45733E2D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LongPressTest/Pods-LongPressTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90992C691E646EFF00FDF977 /* Sources */ = {
@@ -425,25 +500,31 @@
 		};
 		90992C9B1E646F0000FDF977 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5D3DAE2B9E71F4409B09A6 /* Pods-LongPressTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6ZMC6F7RSN;
 				INFOPLIST_FILE = LongPressTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtc.LongPressTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		90992C9C1E646F0000FDF977 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E840C411E1E4273BD6078B1 /* Pods-LongPressTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6ZMC6F7RSN;
 				INFOPLIST_FILE = LongPressTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtc.LongPressTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -516,6 +597,7 @@
 				90992C9C1E646F0000FDF977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90992C9D1E646F0000FDF977 /* Build configuration list for PBXNativeTarget "LongPressTestTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +606,7 @@
 				90992C9F1E646F0000FDF977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90992CA01E646F0000FDF977 /* Build configuration list for PBXNativeTarget "LongPressTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +615,7 @@
 				90992CA21E646F0000FDF977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
